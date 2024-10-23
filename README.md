@@ -1,72 +1,45 @@
 # Rapidgator-Downloader
 Download file from rapidgator with premium user
 
-## rapidgatorstatus.py
-Download by read list of URL in text file (Example : dl.txt)
 
 ### How to run
 ```sh
-Usage: rapidgatorstatus.py [OPTIONS]
+Usage: rapidgator/cli.py [COMMAND] [OPTIONS]
 
-Options:
-  -u, --username TEXT  [required]
-  -p, --password TEXT  [required]
-  -f, --filelist TEXT  [required]
-  --help               Show this message and exit.
+Command:
+  status
+  download-single
+  download-batch
 ```
 
-### Example
-```sh
-$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/dl.txt
-
-$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/dlwithrename.txt
-
-```
-
-
-## rapidgatordl.py
+## status
 Download by read list of URL in text file (Example : dl.txt)
 
-### How to run
-```sh
-Usage: rapidgatordl.py [OPTIONS]
-
-Options:
-  -u, --username TEXT       [required]
-  -p, --password TEXT       [required]
-  -f, --filelist TEXT       [required]
-  -d, --savedirectory TEXT  [required]
-  --help                    Show this message and exit.
-  ```
-
 ### Example
 ```sh
-$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/download/ --filelist /home/noeybnk48/dl.txt
+$ python rapidgator/cli.py status ./dl.txt
 
-$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/download/ --filelist /home/noeybnk48/dlwithrename.txt
+$ python rapidgator/cli.py status ./dlwithrename.txt
 
 ```
 
 
-## rapidgatorsingle.py
+## download batch.
+Download by read list of URL in text file (Example : dl.txt)
+### Example
+```sh
+$ python rapidgator/cli.py download-batch ./dl.txt
+
+$ python rapidgator/cli.py download-batch ./dlwithrename.txt
+
+```
+
+## download url
 Download by URL in argument
 
-### How to run
-
-```sh
-Usage: rapidgatorsingle.py [OPTIONS]
-
-Options:
-  -u, --username TEXT       [required]
-  -p, --password TEXT       [required]
-  -url, --url TEXT          [required]
-  -d, --savedirectory TEXT  [required]
-  --help                    Show this message and exit.
-```
-
 ### Example
 ```sh
-$ python rapidgatorsingle.py --username noeybnk48@gmail.com --password noeyBNK48 --url https://rg.to/file/x318300757fa8c7234e9b837431efa5186  --savedirectory /home/noeybnk48/download/
+$ python rapidgator/cli.py download-single [URL]
 
 ```
 
@@ -78,3 +51,20 @@ $ python rapidgatorsingle.py --username noeybnk48@gmail.com --password noeyBNK48
 ### Reference
 
  - [Rapidgator API](https://rapidgator.net/article/api/index).
+
+
+
+# available file format.
+```
+https://rapidgator.net/file/...
+https://rapidgator.net/file/...
+https://rapidgator.net/file/...
+```
+
+or
+```
+https://rapidgator.net/file/a.rar | alarm.rar
+https://rapidgator.net/file/b.part1.rar | book.part1.rar
+https://rapidgator.net/file/b.part2.rar | book.part2.rar
+https://rapidgator.net/file/8cbb5f521b6d67dad63ab2379a2ed8bb | this_is_a_book.zip 
+```
