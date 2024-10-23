@@ -13,34 +13,27 @@ Command:
 ```
 
 ## status
-Download by read list of URL in text file (Example : dl.txt)
+Download by reading a list of URLs in text file (Example: dl.txt)
 
 ### Example
 ```sh
 $ python rapidgator/cli.py status ./dl.txt
-
-$ python rapidgator/cli.py status ./dlwithrename.txt
-
 ```
 
 
 ## download batch.
-Download by read list of URL in text file (Example : dl.txt)
+Download by reading a list of URLs in text file (Example: dl.txt)
 ### Example
 ```sh
 $ python rapidgator/cli.py download-batch ./dl.txt
-
-$ python rapidgator/cli.py download-batch ./dlwithrename.txt
-
 ```
 
-## download url
-Download by URL in argument
+## download URL
+Download by URL in the argument
 
 ### Example
 ```sh
 $ python rapidgator/cli.py download-single [URL]
-
 ```
 
 ###
